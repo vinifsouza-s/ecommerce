@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Article } from './styles';
 
 const HomePage = () => {
   const [products, setProducts] = useState();
@@ -31,12 +32,15 @@ const HomePage = () => {
               .join('-')}.png`;
             return (
               <>
-                <article key={product.name}>
-                  <h2>{product.name}</h2>
-                </article>
-                <div>
-                  <img src={imagePath} alt={imagePath} />
-                </div>
+                <Article key={product.name}>
+                  <div>
+                    <h2>{product.name}</h2>
+                    <img src={imagePath} alt={imagePath} />
+                    <h3>R$ {product.price}</h3>
+                    <h4>Score: {product.score}</h4>
+                    <button type="button">Comprar</button>
+                  </div>
+                </Article>
               </>
             );
           })}
