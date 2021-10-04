@@ -25,10 +25,19 @@ const HomePage = () => {
       <section>
         {products &&
           products.map(product => {
+            const imagePath = `/images/${product.name
+              .toLowerCase()
+              .split(' ')
+              .join('-')}.png`;
             return (
-              <article key={product.name}>
-                <h2>{product.name}</h2>
-              </article>
+              <>
+                <article key={product.name}>
+                  <h2>{product.name}</h2>
+                </article>
+                <div>
+                  <img src={imagePath} alt={imagePath} />
+                </div>
+              </>
             );
           })}
       </section>
