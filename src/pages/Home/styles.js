@@ -1,35 +1,31 @@
 import styled from 'styled-components';
 
 export const Article = styled.article`
-  display: inline-block;
-  width: 25%;
-  padding: 20px;
-  border: 2px solid gray;
-  border-radius: 20px;
-  margin: auto;
-  word-wrap: break-word;
-
   div {
+    width: 30%;
     padding: 10px;
-    margin: auto;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin: 20px auto;
+    word-wrap: break-word;
+  }
+
+  section {
+    padding-right: 50px auto;
   }
 
   h2 {
     font-size: 25px;
     color: #282120;
-    padding-left: 10px;
   }
-
   h3 {
     font-size: 20px;
     color: #456990;
-    padding-left: 100px;
   }
 
   h4 {
     font-size: 20px;
     color: #d1d100;
-    padding-left: 100px;
   }
 
   button {
@@ -39,5 +35,6 @@ export const Article = styled.article`
     border-radius: 4px;
     text-align: center;
     margin-bottom: 40px;
+    cursor: pointer;
   }
 `;
